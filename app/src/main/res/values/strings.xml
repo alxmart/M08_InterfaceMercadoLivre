@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">M08_InterfaceMercadoLivre</string>
+    <string name="cd_logo">Logo do MErcado livre.</string>
+    <string name="cd_logoPromocao">Logo da proioção.</string>
+    <string name="tv_oferta">Oferta do dia</string>
+    <string name="cd_produto_text">Imagem da fritadeira em oferta.</string>
+    <string name="tv_produto_text">Fritadeira Elétrica Multilaser Air Fryer</string>
+    <string name="iv_produto_desc_text">Fritadeira Elétrica Multilaser Air Fryer 4L Preta 1500W. Prepare deliciosas receitas de forma mais saudável.</string>
+    <string name="btn_comprar_text">Comprar</string>
 </resources>

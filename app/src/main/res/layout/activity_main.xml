@@ -1,18 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/cd_logo"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_mercado_livre" />
+
+    <ImageView
+        android:id="@+id/iv_promo"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/cd_logoPromocao"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo"
+        app:srcCompat="@drawable/promocao"
+        tools:ignore="ImageContrastCheck" />
+
     <TextView
+        android:id="@+id/tv_oferta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_oferta"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_promo" />
 
+    <ImageView
+        android:id="@+id/iv_produto"
+        android:layout_width="129dp"
+        android:layout_height="199dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/cd_produto_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_oferta"
+        app:srcCompat="@drawable/produto" />
+
+    <TextView
+        android:id="@+id/tv_produto"
+        android:layout_width="198dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/tv_produto_text"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_produto"
+        app:layout_constraintTop_toTopOf="@+id/iv_produto"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tv_desc_produto"
+        android:layout_width="197dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/iv_produto_desc_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toEndOf="@+id/iv_produto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_produto"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_comprar_text"
+        app:layout_constraintStart_toEndOf="@+id/iv_produto"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc_produto" />
 </androidx.constraintlayout.widget.ConstraintLayout>
